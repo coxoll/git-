@@ -25,9 +25,9 @@
         4.保存到本地仓库中 git commit -m '备注信息'
 
         拉取、提交、克隆、远程仓库  *先拉取，后提交
-        1.拉取 git pull 地址
-        2.提交 git push 路径 master
-        3.克隆 git clone 地址
+        1.拉取 git pull 储存库地址
+        2.提交 git push -u 储存库地址 master   (首次提交要用-u)
+        3.克隆 git clone 储存库地址
 
 
 
@@ -44,7 +44,7 @@
         $ git reset --hard 版本号(前四位即可)   切换版本
         $ git reflog                          查看版本的操作记录(全部版本信息)
         $ git init --bare                     初始化远程仓库
-        $ git push 仓库地址 master               提交
+        $ git push -u仓库地址 master           提交(首次提交要用-u)
         $ git clone 仓库地址                   没有仓库克隆仓库
         $ git pull 仓库地址 master             有仓库,当代码     
         git分支
