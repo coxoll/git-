@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        github代码托管平台
+        创建秘钥
+        1.在任意文件中生成秘钥ssh-keygen -t rsa 
+        2.在C盘用户目录中找到.ssh文件中 复制.pub的公钥
+        3.打开github在设置中SSH秘钥中创建用户名，粘贴.pub的公钥
+        创建库
+        github中创建库
+
+        git储存到本地仓库
+        1.初始化 设置用户名、设置邮箱   
+        git config --global user.name '我的名字'
+        git config --global user.email '我的邮箱'	    
+        2.初始化仓库 git init .
+        3.保存到暂存中git add . 查看文件状态 git status                                         	    
+        4.保存到本地仓库中 git commit -m '备注信息'
+
+        拉取、提交、克隆、远程仓库  *先拉取，后提交
+        1.克隆 git clone 地址
+        2.拉取 git pull 地址
+
+        
+
+
+
+        git:分布式版本系统
+        git工作原理  工作区(状态:已修改)→ 暂存区(已暂存)→ 本地仓库(已提交)
+        1.配置用户 (用户名、邮箱)
+        2. $ git init                     初始化本地仓库
+        3. $ git status                   查看文件状态
+        4. $ git add 文件路径(.|*|-A所有)  文件暂存
+        5. $ git commit -m '备注信息'      本地仓库
+        $ git checkout 路径(.所有)      恢复
+       
+        $ git log                             查看当前、之前版本信息
+        $ git reset --hard 版本号(前四位即可)   切换版本
+        $ git reflog                          查看版本的操作记录(全部版本信息)
+        $ git init --bare                     初始化远程仓库
+        $ git push 仓库地址 master               提交
+        $ git clone 仓库地址                   没有仓库克隆仓库
+        $ git pull 仓库地址 master             有仓库,当代码     
+        git分支
+        // master→ 创建分支hotfix→ 合并分支→ 删除分支
+        $ git branch           
+        $ git branch (分支名)hotfix   创建分支
+        $ git checkout 分支名         切换分支
+        $ git merge 分支名            合并分支
+        $ git branch -d 分支名        删除分支
+
+        SSH协议 (免用户名和密码验证)
+        1.生成 私钥 公钥  ssh-Keygen -t rsa
+        2.复制你的公钥    C:\Users\用户名\.ssh\id_rsa
+        3.登录github
+        4.添加key到github
+        *第一次登录会有提示,输入yes
+        作业:仓库 pyg. https://github.com/zhousg/pyg_front
+    </script>
+</body>
+</html>
